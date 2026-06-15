@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindCare Cahul - Programare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/programare.css">
+</head>
+<body>
+
+    <header class="navbar">       
+        
+        <a href="../index.html" class="logo">
+            <img src="../imagini/image 8 iun. 2026, 00_47_31.png" alt="MindCare Logo">
+            <span>MindCare <small>Cahul</small></span>
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="servicii.html">Servicii</a>
+            <a href="specialisti.html">Specialiști</a>
+            <a href="programare.html" class="active">Programare</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="appointment-container">
+        <section class="form-section">
+            <h1>Programează o Ședință</h1>
+            <p class="subtitle">Completează formularul de mai jos pentru a programa o consultație. Îți vom confirma programarea în cel mai scurt timp.</p>
+
+            <form id="appointmentForm" onsubmit="showModal(event)">
+                <div class="form-grid">
+                    <div class="form-group"><label>Nume Complet *</label><input type="text" required></div>
+                    <div class="form-group"><label>Email *</label><input type="email" required></div>
+                    <div class="form-group"><label>Telefon *</label><input type="tel" required></div>
+                    <div class="form-group"><label>Tip Serviciu *</label><select required><option>Consiliere Individuală</option></select></div>
+                    <div class="form-group"><label>Specialist (Optional)</label><select><option>Selectează...</option></select></div>
+                    <div class="form-group"><label>Data Preferată *</label><input type="date" required></div>
+                    <div class="form-group"><label>Ora Preferată *</label><select required><option>09:00</option></select></div>
+                </div>
+                <div class="form-group full-width"><label>Mesaj (Optional)</label><textarea rows="4"></textarea></div>
+                <button type="submit" class="submit-btn">Trimite Programarea</button>
+            </form>
+        </section>
+
+        <aside class="info-sidebar">
+            <div class="info-card">
+                <h3>Program de Lucru</h3>
+                <p>Luni - Vineri: <strong>09:00 - 18:00</strong></p>
+                <p>Sâmbătă: <strong>10:00 - 14:00</strong></p>
+                <p>Duminică: <strong>Închis</strong></p>
+            </div>
+            <div class="info-card">
+                <h3>Contact Direct</h3>
+                <p>Telefon: <br><strong>+373 788 22 145</strong></p>
+                <p>Email: <br><strong>contact@mindcare-cahul.md</strong></p>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Modal Success -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="check-icon">✓</div>
+            <h2>Trimisă</h2>
+            <button onclick="closeModal()" class="back-btn">Inapoi</button>
+        </div>
+    </div>
+
+    <script>
+        function showModal(event) {
+            event.preventDefault();
+            document.getElementById('successModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('successModal').style.display = 'none';
+        }
+    </script>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo-footer">
+                    <img src="../imagini/image 8 iun. 2026, 00_47_31.png" alt="MindCare Logo" class="footer-logo-img"> MindCare
+                </div>
+                <p>Asistență psihologică integrată, ședințe confidențiale și terapeuți acreditați conștiincioși.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Navigare</h4>
+                <ul>
+                    <li><a href="specialisti.html">Echipa Noastră</a></li>
+                    <li><a href="Servicii.html">Servicii Detaliate</a></li>
+                    <li><a href="Servicii.html">Prețuri & Abonamente</a></li>
+                    <li><a href="#">Termeni și Confidențialitate</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact Direct</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-phone"></i> +273 355 7899</li>
+                    <li><i class="fa-solid fa-envelope"></i> confira@mindcare.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Locație: Cahul, Moldova</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Blog</h4>               
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Facebook | Instagram | YouTube</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            Copyright © 2026 - MindCare Cahul
+        </div>
+    </footer>
+</body>
+</html>

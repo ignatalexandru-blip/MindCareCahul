@@ -1,0 +1,433 @@
+/* ==========================================================================
+   1. RESET & SETĂRI DE BAZĂ
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #e8f1ec; /* Nuanța vernil pal din imagini */
+    color: #2b5f54;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Aliniere centrală container general */
+.center-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   2. NAVBAR CORPORAT (Identic cu restul site-ului)
+   ========================================================================== */
+
+   .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: #2b5f54;
+    font-size: 1.15rem;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background-color: #eef5f2; /* Verde foarte pal din partea de sus */
+    border-bottom: 1px solid #e1ebe7;
+}
+.navbar {
+    padding: 0px 7%;
+}
+
+
+
+
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222222;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #357c6c;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #357c6c;
+    padding-bottom: 4px;
+}
+/* ==========================================================================
+   3. HERO SECTION (Titlu & Harta Mare)
+   ========================================================================== */
+.contact-hero-section {
+    padding: 50px 0 30px 0;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a3d35;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.main-subtitle {
+    font-size: 14px;
+    color: #557269;
+    margin-bottom: 40px;
+}
+
+/* Containerul hărții cu rotunjire mare exact ca în Screenshot 2026-06-12 022559_2.jpg */
+.hero-map-container {
+    width: 100%;
+    height: 380px;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   4. CABINETUL DIN CAHUL (Secțiunea cu Text și Carduri Orizontale)
+   ========================================================================== */
+.cabinet-details-section {
+    padding: 40px 0;
+}
+
+.section-badge {
+    font-size: 10px;
+    font-weight: 700;
+    color: #4a7c70;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.cabinet-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a3d35;
+    margin-bottom: 15px;
+}
+
+.cabinet-description {
+    font-size: 13px;
+    color: #557269;
+    max-width: 520px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* Grid-ul celor 2 carduri orizontale */
+.cabinet-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.horizontal-card {
+    background-color: #ffffff;
+    padding: 22px 25px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+}
+
+.horizontal-card .card-icon i {
+    color: #357c6c;
+    font-size: 18px;
+}
+
+.horizontal-card .card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.card-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #1a3d35;
+}
+
+.card-value {
+    font-size: 12px;
+    color: #666666;
+}
+
+/* ==========================================================================
+   5. CANALE DE COMUNICARE (Secțiunea cu cele 3 Carduri Albe)
+   ========================================================================== */
+.channels-section {
+    padding: 50px 0;
+}
+
+.channels-badge-container {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.channels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.vertical-channel-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+    display: flex;
+    flex-direction: column;
+}
+
+.channel-icon {
+    margin-bottom: 20px;
+}
+
+.channel-icon i {
+    color: #357c6c;
+    font-size: 20px;
+}
+
+.vertical-channel-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a3d35;
+    margin-bottom: 12px;
+}
+
+.vertical-channel-card p {
+    font-size: 11.5px;
+    color: #777777;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Împinge link-ul jos ca să fie aliniate perfect */
+}
+
+.channel-link {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #2b5f54;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.channel-link:hover {
+    color: #357c6c;
+}
+
+/* ==========================================================================
+   6. ÎNTREBĂRI & SECȚIUNEA CTA (Fundal Gri-Vernil Intermediar)
+   ========================================================================== */
+.questions-cta-section {
+    background-color: #dbede4; /* Nuanța exactă de fundal din screenshot-ul 2 */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.abstract-shape-icon {
+    margin-bottom: 15px;
+}
+
+.cta-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a3d35;
+    margin-bottom: 8px;
+}
+
+.cta-subtitle {
+    font-size: 13px;
+    color: #557269;
+    margin-bottom: 30px;
+}
+
+/* Butonul masiv din imaginea ta */
+.cta-message-btn {
+    display: inline-block;
+    background-color: #1c3833; /* Culoarea extrem de închisă a butonului */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 15px 55px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.2s ease;
+    margin-bottom: 35px;
+}
+
+.cta-message-btn:hover {
+    background-color: #2b5f54;
+}
+
+/* Link-urile mici de sub buton */
+.cta-footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta-footer-links a {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #2b5f54;
+    text-decoration: none;
+}
+
+.cta-footer-links .divider {
+    color: #2b5f54;
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   7. FOOTER CORPORAT ÎNTUNECAT (Identic cu cel trimis în screenshot 2)
+   ========================================================================== */
+footer {
+    background-color: #12282e; /* Fundalul închis / Navy-Green din poza ta */
+    color: #ffffff;
+    padding: 60px 8% 20px 8%;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr repeat(3, 1fr);
+    gap: 40px;
+    border-bottom: 1px solid #223c44;
+    padding-bottom: 40px;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    color: #8da2aa;
+    line-height: 1.6;
+    margin-top: 15px;
+    max-width: 250px;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.footer-logo-img {
+    width: 90px;
+    height: auto;
+}
+
+.footer-column h4 {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    font-size: 12px;
+    color: #8da2aa;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 40px;
+    margin-top: 15px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: opacity 0.2s;
+}
+
+.social-icons img:hover {
+    opacity: 0.8;
+}
+
+/* Copyright (Zona de jos) */
+.copyright {
+    text-align: center;
+    font-size: 11px;
+    color: #61737d;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+/* ==========================================================================
+   8. RESPONSIVITATE COMPLETĂ MOBIL
+   ========================================================================== */
+@media (max-width: 900px) {
+    .channels-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .cabinet-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .main-title {
+        font-size: 28px;
+    }
+    .cta-footer-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .cta-footer-links .divider {
+        display: none;
+    }
+}

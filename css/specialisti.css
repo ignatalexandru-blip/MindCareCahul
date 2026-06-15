@@ -1,0 +1,384 @@
+/* --- RESET & GLOBAL STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e8f1ec; /* Fundalul general vernil deschis */
+    color: #333333;
+}
+
+a {
+    text-transform: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- HEADER & NAVIGATION (Importat din stilul tău de bază) --- */
+header {
+    background-color: #ffffff;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: #2b5f54;
+    font-size: 1.15rem;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 7%;
+    background-color: #eef5f2;
+    border-bottom: 1px solid #e1ebe7;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222222;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #357c6c;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #357c6c;
+    padding-bottom: 4px;
+}
+
+/* --- HERO SECTION --- */
+.specialists-hero {
+    text-align: center;
+    padding: 50px 20px 20px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team-icon {
+    font-size: 50px;
+    color: #214436;
+    margin-bottom: 15px;
+}
+
+.specialists-hero h1 {
+    font-size: 34px;
+    color: #1c3b2e;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.specialists-hero p {
+    font-size: 14.5px;
+    color: #555555;
+    line-height: 1.65;
+}
+
+/* --- CARDS CONTAINER & DESIGN --- */
+.specialists-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.specialist-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Alinierea containerului imaginii */
+.avatar-side {
+    flex: 0 0 240px;
+}
+
+/* ADAUGĂ ȘI ACEASTA: Forțează imaginea PNG să devină pătrată și rotunjită */
+.avatar-side img {
+    width: 240px;
+    height: 240px;
+    border-radius: 14px;  /* Rotunjește colțurile imaginii exact ca în machetă */
+    object-fit: cover;    /* Decupează inteligent imaginea ca să nu apară turtită */
+    display: block;
+}
+
+/* Secțiunea de text din card */
+.info-side {
+    flex: 1;
+}
+
+.spec-badge {
+    background-color: #e8f4f0;
+    color: #357c6c;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.info-side h2 {
+    font-size: 24px;
+    color: #1c3b2e;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.spec-bio {
+    font-size: 13.5px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.comp-title {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #2b5f54;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+/* Listele pe două coloane egale */
+.comp-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 20px;
+    list-style: none;
+}
+
+.comp-list li {
+    font-size: 12.5px;
+    color: #444444;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.comp-list li i {
+    color: #357c6c;
+    font-size: 11px;
+}
+
+/* --- CHOOSE SPECIALIST (CTA) --- */
+.choose-specialist-section {
+    background-color: #cedfd6;
+    text-align: center;
+    padding: 55px 20px;
+    margin-top: 60px;
+}
+
+.choose-specialist-section h2 {
+    font-size: 28px;
+    color: #1c3b2e;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.choose-specialist-section p {
+    font-size: 14px;
+    color: #44584e;
+    max-width: 620px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+.cta-buttons-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Butoanele din imaginea trimisă de tine */
+.btn-primary, .btn-secondary {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #3f7e6e;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #2d5d51;
+}
+
+.btn-secondary {
+    background-color: #4c8778;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #376459;
+}
+
+/* --- FOOTER (Păstrat intact) --- */
+footer {
+    background-color: #11252c;
+    color: #aec1cc;
+    padding: 50px 8% 20px 8%;
+}
+
+.footer-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr 1fr;
+    gap: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 30px;
+}
+
+.footer-brand .logo-footer {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-logo-img {
+    height: 50px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #8fa0aa;
+}
+
+.footer-column h4 {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    font-size: 12px;
+    color: #8fa0aa;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
+
+.contact-info li {
+    font-size: 12px;
+    color: #8fa0aa;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px !important;
+}
+
+.contact-info li i {
+    color: #4a7c64;
+    width: 14px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 40px;
+    margin-top: 12px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 11px;
+    color: #61737d;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+/* --- ADAPTARE MOBIL (RESPONSIVE) --- */
+@media (max-width: 850px) {
+    .specialist-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+    .avatar-side {
+        flex: none;
+    }
+    .comp-list {
+        grid-template-columns: 1fr;
+        justify-items: start;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cta-buttons-group {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
